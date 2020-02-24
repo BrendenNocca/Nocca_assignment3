@@ -17,10 +17,12 @@ public class SavingsAccountTest {
 	public static void MonthTwo() {
 		double NewInterestRate= 0.05;
 		changeInterest(NewInterestRate);
+		System.out.println("Month two:");
 		printInterest();
 	}
 	
 	public static void MonthOne() {
+		System.out.println("Month one:");
 		printInterest();
 	}
 	public static void main(String[] args) {

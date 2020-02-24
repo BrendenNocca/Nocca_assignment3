@@ -14,7 +14,6 @@ public class CAI5 {
 			question(num1,num2,questionType(type));
 		
 			double CorrectAnswer = typeAnswer(num1,num2,type);
-			System.out.println(CorrectAnswer);
 			return CorrectAnswer;
 		}
 		
@@ -63,9 +62,13 @@ public class CAI5 {
 		}
 		
 		public static int readPorblemType() {
-			System.out.println("Would you like addition(Enter 1), Multiplication(Enter 2), Subtraction(Enter 3), Division(Enter 4)");
+			System.out.println("Would you like addition(Enter 1), Multiplication(Enter 2), Subtraction(Enter 3), Division(Enter 4), or a random subset of all 4(5)");
 			int type =0;
 			type =(int) readResponse();
+			while (type >5 || type <1) {
+				System.out.println("Please enter a type between 1 and 5");
+				type=(int) readResponse();
+			}
 			return type;
 		}
 		

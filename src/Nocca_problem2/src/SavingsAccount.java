@@ -1,7 +1,6 @@
-import java.util.Scanner;
 public class SavingsAccount {
 	private double savingsBalance;
-	public static double interestRate;
+	public  double interestRate;
 	
 	public SavingsAccount(double savingsBalance) {
 		setSavingsAccount(savingsBalance);
@@ -30,7 +29,8 @@ public class SavingsAccount {
 		printMonthlyInterest(savingsBalance);
 	}
 	public void printMonthlyInterest(double monthlyInterest) {
-		System.out.println("Your monthly interest is"+monthlyInterest+" ");
+		double rounededInterest = Math.round(monthlyInterest*100)/100;
+		System.out.println("Your monthly interest is"+rounededInterest +" ");
 	}
 	
 	

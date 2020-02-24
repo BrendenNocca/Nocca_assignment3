@@ -15,6 +15,18 @@ public class CAI2 {
 			return CorrectAnswer;
 		}
 		
+
+		public static void IsAnswerCorrect(int Answer) {
+			Scanner in = new Scanner(System.in);
+			int StuAnswer = readResponse();
+			while (StuAnswer != Answer) {
+				displayIncorrectResponse();
+				StuAnswer = readResponse();
+				
+			}
+			displayCorrectResponse(); 
+		}
+		
 		public static void displayCorrectResponse() {
 			Random selection = new Random();
 			int selectionNum = selection.nextInt(4);
@@ -47,18 +59,6 @@ public class CAI2 {
 			int Response = in.nextInt();
 			return Response;
 		}
-		
-		public static void IsAnswerCorrect(int Answer) {
-			Scanner in = new Scanner(System.in);
-			int StuAnswer = readResponse();
-			while (StuAnswer != Answer) {
-				displayIncorrectResponse();
-				StuAnswer = readResponse();
-				
-			}
-			displayCorrectResponse(); 
-		}
-		
 		
 		public static void quiz() {
 			IsAnswerCorrect(AskQuestion());
